@@ -21,7 +21,7 @@ script:
 # include
 branches:
   except:
-    - test_branch
+    - test_branch/0.01
 
 # Tell istanbul to generate a coverage report
 after_script:
