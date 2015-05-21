@@ -7,12 +7,15 @@ node_js:
 
 # The path for Xunit to output test reports
 env:
+ global:
+  - secure: hwXYXt45UHtVvZ5Vmmjas8++VMCTZnm/fCt4mcVBfgnWrWk1TSIxT7nWg7QinK6Q4ZVkciNK8OWHiB+t/LFPMBjIMUDQwNC44Utk6MjHBNyIsLIWPGmvOuY3vG1PpecuLjY2BwAutaoQjA/mya6XikpBdgmmuEs73lnXu3fkUgKaE6ayMY/9fWH70R4Kub2Esx6YmXylm+eTPZUYqasTCkhA4tqb109CwIGxsobD+eEdR0QPTc0ds58QLIT5xbzEaiKJzvVzPgAXoO6jv1DaOmwgUk3wYQ0DvbvCXzp7wYoKgEYOpHi0MxJvzOc88rfSQAfYkPfDGmiDkCpk0MGDug==
   - XUNIT_FILE=shippable/testresults/result.xml
 
 # Create directories for test and coverage reports
 before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
+  - echo $test
 
 # Running the tests with grunt
 script:
