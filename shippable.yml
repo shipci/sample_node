@@ -20,7 +20,7 @@ script:
 
 # include
 branches:
-  only:
+  exclude:
     - master
 
 # Tell istanbul to generate a coverage report
