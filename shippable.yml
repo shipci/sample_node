@@ -35,6 +35,8 @@ after_script:
 notifications:
      email:
          recipients:
-             - pranay@shippable.com
-         on_success: always
+             - vidya@shippable.com
+         on_success: change
          on_failure: always
+
+cache: true
