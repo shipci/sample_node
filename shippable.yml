@@ -7,7 +7,9 @@ node_js:
 
 # The path for Xunit to output test reports
 env:
+ global:
   - XUNIT_FILE=shippable/testresults/result.xml
+  - secure: GHHE9zNeMZhKyXjKx4FwwpWGKUt52I1TE7n7LdSBrjqBmKXqzTvccZDUugfHm9eZP19a+fxY3oN4BFcVa4VIsLoT+lFU8sB0DcSFdx0ylvfpG+CMzIlADwROOp7W2Tyl7vpxvGjpq3R4IdrPuSYfVfdpWcIQmTQ4nU3O03jfhU+jojAV8sQ9mj5AxSMArpP2rktrTDL+8wlJ/kMl3MnTOGS2xUzrcVAn204JXo3mRh53UsCSah43xh43c79u1U92EYvhFglobApwgkjH+padGTJalo+J9VZPO6sJyRrYckLwgdHEuWWoYyt0JOqHNc03nrsNK/7h1Lzl4XeMcMQ0Pw==
 
 # Create directories for test and coverage reports
 before_script:
@@ -17,6 +19,7 @@ before_script:
 # Running the tests with grunt
 script:
   - grunt
+  - echo $test_prod
 
 # include
 branches:
@@ -32,6 +35,6 @@ after_script:
 notifications:
      email:
          recipients:
-             - pranay@shippable.com
-         on_success: always
+             - vidya@shippable.com
+         on_success: never
          on_failure: always
