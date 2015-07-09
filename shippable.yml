@@ -20,6 +20,7 @@ before_script:
 # Running the tests with grunt
 script:
   - grunt
+  - sleep 7000
 
 # include
 branches:
